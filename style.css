@@ -1,0 +1,700 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Font regular/semi-bold */
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('font/Regular/raleway-regular-webfont.woff2') format('woff2'),
+        url('font/regular/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ralewaysemibold';
+    src: url('font/Semi-bold/raleway-semibold-webfont.woff2') format('woff2'),
+         url('font/Semi-bold/raleway-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    max-width: 992px;
+    font-family: 'ralewayregular';
+}
+
+
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    margin: 0 20px 0 20px;
+}
+header img {
+    position: relative;
+    top: 50px;
+    left: 10px;
+    width: 72px;
+    height: 36px;
+}
+nav {
+    display: flex;
+}
+ul{
+    display: flex;
+}
+li {
+    list-style: none;
+    padding: 20px;
+}
+li:hover {
+    border-top: 2px #0065fc solid;
+}
+li:hover a {
+    color: #0065fc;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+nav a:hover {
+    color: #0065fc;
+}
+/* media Q Header*/
+@media screen and (max-width: 768px)
+ {  
+   header {
+       flex-direction: column;
+       height: 250px;
+       align-items: center;
+   } 
+   header img {
+       width: 30%;
+       height: auto;
+   } 
+   nav {
+    width: 100%;
+   }
+   ul {
+    width: 100%;
+    padding: 0 0 0 0; 
+   }
+   li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px #f2f2f2 solid;
+   }
+   li:hover {
+    border-bottom: 2px #0065fc solid;
+    border-top: none;
+   }
+   nav a {
+    font-size: 25px;
+   }
+ }
+
+ 
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 992px;
+    width: 100%;
+}
+
+
+
+/* Recherche */
+.recherche {
+    display: flex;
+    flex-direction: column;
+}
+.titre h2 {
+    font-family:'ralewaysemibold';
+    font-size: 15px;
+    margin: 0 0 5px 20px;
+}
+.titre p {
+    font-size: 13px;
+    margin: 0 0 5px 20px;
+}
+.formulaire {
+    display: flex;
+    margin: 10px 0 5px 20px;
+}
+.dot {
+    padding: 12px;
+    width: 40px;
+    height: 41px;
+    background: #f2f2f2;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.field {
+    padding: 10px;
+    width: 160px;
+    border: 1px #f2f2f2 solid;
+    border-right:1px #0065fc solid;
+}
+.btn1 {
+    width: 106px;
+    height: 41px;
+    background: #0065fc;
+    color: white;
+    border: none;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.btn2 {
+    display: none;
+}
+.filtres {
+    display: flex;
+    margin: 15px 0 15px 20px;
+}
+.filtres h3 {
+    font-size: 12px;
+}
+.container {
+    display: flex;
+}
+.boitefiltre {
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    height: 40px;
+    border: 2px #f2f2f2 solid;
+    border-radius: 45px;
+} 
+.boitefiltre:hover {
+    border: 3px #0065fc solid;
+}
+.boitefiltre:hover h3 {
+    color: #0065fc;
+    font-family: 'ralewaysemibold';
+}
+.boitefiltre:hover i {
+    color: #deebff;
+    background-color: #0065fc;
+}
+.boitefiltre i {
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    color: #0065fc;
+    background: #deebff;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 15px;
+}
+.boitefiltre h3 {
+    padding: 8px 12px 8px 8px;
+}
+.infos {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 20px;
+}
+.infos i {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    color: #0065fc;
+    font-size: 11px;
+    border-radius: 100%;
+    border: 1px #f2f2f2 solid;
+    text-align: center;
+}
+.infos p {
+    font-size: 13px;
+    margin: 0 0 0 10px;
+}
+
+/* media Q Recherche */
+@media screen and (max-width: 768px)
+{
+    .titre h2 {
+        font-size: 30px;
+        margin: 20px 20px 5px 20px;
+    }
+    .recherche p {
+        font-size: 20px;
+        margin: 0 20px 5px 20px;
+    }
+    .formulaire {
+        margin-top: 30px;
+    }
+    .dot {
+        padding: 18px;
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .field {
+        width: 70%;
+        height: 60px;
+    }
+    .btn1 {
+        display: none;
+    }
+    .btn2 {
+        display: block;
+        width: 60px;
+        height: 60px;
+        background: #0065fc;
+        color: white;
+        border: none;
+        border-radius: 17px;
+        font-size: 20px;
+        position: relative;
+        right: 14px;
+    }
+    .filtres {
+        flex-direction: column;
+    } 
+    .container {
+        flex-wrap: wrap;
+    }
+    .boitefiltre {
+        margin: 10px 10px 10px 0;
+        height: 55px;
+    }
+    .boitefiltre i {
+        width: 55px;
+        height: 55px;
+        padding: 19px;
+        font-size: 18px;
+    }
+    .filtres h3 {
+        font-size: 15px;
+    }
+    .boitefiltre h3 {
+        padding-right: 24px;
+    }
+    .infos i {
+        width: 33px;
+        height: 30px;
+        font-size: 14px;
+        padding: 5px;
+        border: 2px #f2f2f2 solid;
+    }
+    
+}
+
+
+
+/* Les plus populaire */
+.populaire {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    margin: 20px;
+}
+.populaire a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.titrepop {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 20px 10px 20px;
+}
+.titrepop h2 {
+    font-size: 15px;
+    font-family: 'ralewaysemibold';
+    margin: 0 0 0 0;
+}
+.containercartepop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+}
+.cartepop {
+    display: flex;
+    width: 100%;
+    padding: 4px;
+    border-radius: 20px;
+    background-color: white;
+    align-items: center;
+    box-shadow: 2px 3px 7px rgb(201, 201, 201);
+    margin-bottom: 20px;
+}
+.cartepop img {
+    width: 40%;
+    height: 107px;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+}
+.textdroite {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100px;
+    justify-content: space-between;
+    padding: 7px 10px 4px 10px;
+}
+.textdroite .text {
+    font-size: 10px;
+}
+.star {
+    display: flex;
+    width: 40%;
+    font-size: 10px;
+    color: #0065fc;
+}
+.textdroite h3 {
+    font-family: 'ralewaysemibold';
+    margin: 0 0 5px 0;
+}
+.textdroite p {
+    margin: 0 0 0 0;
+}
+.grey {
+    color: #f2f2f2;
+}
+
+/* media Q Populaire */
+@media screen and (max-width: 768px) 
+{
+    .populaire {
+        width: auto;
+        border-radius: 0px;
+        margin: 40px 0 0 0;
+    }
+    .populaire a {
+        width: 100%;
+        height: 100%;
+    }
+    .titrepop h2 {
+        font-size: 20px;
+    }
+    .textdroite h3 {
+        font-size: 15px;
+    }
+    .textdroite p {
+        font-size: 13px;
+    }
+    .cartepop {
+        height: 150px;
+    }
+    .cartepop img {
+        height: 100%;
+    }
+    .textdroite {
+        padding: 6px 10px 6px 10px;
+    }
+}
+
+
+
+/* Hebergements a marseille */
+#hébergements {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    margin: 20px 10px 20px 20px;
+}
+#hébergements a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+#hébergements h2 {
+    font-size: 15px;
+    font-family: 'ralewaysemibold';
+    margin: 0 0 0 0;
+    width: 100%;
+    padding: 20px 20px 10px 20px;
+}
+#hébergements h3 {
+    font-size: 12px;
+    font-family: 'ralewaysemibold';
+    margin: 0 0 0 0;
+    width: 100%;
+    padding: 20px 20px 10px 20px;
+}
+.containercarteheb {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+}
+.carteheb {
+    display: flex;
+    flex-direction: column;
+    width: 177px;
+    padding: 4px;
+    border-radius: 20px;
+    background-color: white;
+    align-items: center;
+    box-shadow: 2px 3px 7px rgb(201, 201, 201);
+    margin: 10px;
+}
+.carteheb img {
+    width: 167px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.textbas {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin: 5px 0 5px 5px;
+}
+.textbas .text {
+    font-size: 10px;
+}
+#hébergements .textbas h3 {
+    margin: 0 0 4px 0;
+    padding: 0 0 0 0;
+}
+.textbas p {
+    margin: 0 0 4px 0;
+}
+.partie1 {
+    display: flex;
+    flex-direction: row-reverse;
+} 
+/*media Q Hebergements*/
+@media screen and (max-width: 768px)
+{
+    .partie1 {
+        flex-direction: column;
+    }
+    #hébergements {
+        border-radius: 0px;
+        background-color: white;
+        width: auto;
+        margin: 20px 0 0 0;
+    }
+    .containercarteheb {
+        flex-direction: column;
+    }
+    #hébergements h2 {
+        font-size: 20px;
+    }
+    #hébergements p {
+        font-size: 13px;
+    }
+    #hébergements h3 {
+        font-size: 15px;
+    }
+    .carteheb {
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+    .carteheb img {
+        width: 100%;
+    }
+}
+
+
+
+/* Activités a Marseille */
+.partie2 {
+    display: flex;
+}
+#activités {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#activités h2 {
+    font-size: 15px;
+    font-family: 'ralewaysemibold';
+    margin: 0 0 0 0;
+    width: 100%;
+    padding: 20px 20px 20px 0px;
+}
+#activités a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.containercarteact {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 350px;
+    justify-content: space-between;
+}
+.boxcarte {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    justify-content: space-between;
+}
+.carteact {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 3px 7px rgb(201, 201, 201);
+}
+.carteact img {
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 305px;
+}
+.titrebas {
+    display: flex;
+    width: 100%;
+    height: 45px;
+}
+.carteact h3 {
+    font-family: 'ralewaysemibold';
+    padding: 5px 0 5px 18px;
+    font-size: 11px;
+}
+.img50 img {
+    height: 115px;
+}
+.img60 img {
+    height: 147px;
+}
+.img40 img {
+    height: 83px;
+}
+
+/*media Q Activité */
+@media screen and (max-width: 768px)
+{
+    #activités {
+        width: 100%;
+        padding: 10px;
+    }
+    #activités h2 {
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    #activités h3 {
+        font-size: 15px;
+    }
+    .containercarteact {
+        flex-direction: column;
+    }
+    .boxcarte {
+        width: 100%;
+    }
+    .carteact {
+        height: auto;
+        margin: 10px;
+        width: auto;
+    }
+    .carteact img {
+        height: 150px;
+    }
+    .titrebas {
+        height: auto;
+    }
+    .partie2 {
+        flex-direction: column;
+        height: 1420px;
+    }
+    
+
+}
+
+
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #f2f2f2;
+    margin-top: 40px;
+}
+.boxpart {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+}
+.part {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.part h3 {
+    font-family:'ralewaysemibold';
+    font-size: 15px;
+    margin: 10px 0 5px 0;
+}
+.part p {
+    line-height: 24px;
+    margin: 10px 0 10px 0;
+    font-size: 13px;
+}
+
+/* media Q footer */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+    .boxpart {
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .part {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .part p {
+        font-size: 14px;
+    }
+    .part h3 {
+        font-size: 14px;
+    }
+}
+
+
+/* media Q pour pad */
+@media screen and (max-width: 992px) {
+    .containercarteheb {
+        justify-content: space-evenly;
+    }
+    .containercartepop {
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    .cartepop {
+        height: 150px;
+    }
+    .cartepop img {
+        height: 100%;
+    }
+    .textdroite {
+        height: 100%;
+    }
+}
