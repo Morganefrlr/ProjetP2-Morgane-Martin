@@ -2,24 +2,6 @@
     box-sizing: border-box;
 }
 
-/* Font regular/semi-bold */
-@font-face {
-    font-family: 'ralewayregular';
-    src: url('font/Regular/raleway-regular-webfont.woff2') format('woff2'),
-        url('font/regular/raleway-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'ralewaysemibold';
-    src: url('font/Semi-bold/raleway-semibold-webfont.woff2') format('woff2'),
-         url('font/Semi-bold/raleway-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 
 html {
@@ -30,7 +12,7 @@ html {
 
 body {
     max-width: 992px;
-    font-family: 'ralewayregular';
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -123,7 +105,7 @@ main {
     flex-direction: column;
 }
 .titre h2 {
-    font-family:'ralewaysemibold';
+    font-weight: bold;
     font-size: 15px;
     margin: 0 0 5px 20px;
 }
@@ -320,7 +302,7 @@ main {
 }
 .titrepop h2 {
     font-size: 15px;
-    font-family: 'ralewaysemibold';
+    font-weight: bold;
     margin: 0 0 0 0;
 }
 .containercartepop {
@@ -363,7 +345,7 @@ main {
     color: #0065fc;
 }
 .textdroite h3 {
-    font-family: 'ralewaysemibold';
+    font-weight: bold;
     margin: 0 0 5px 0;
 }
 .textdroite p {
@@ -424,14 +406,14 @@ main {
 }
 #hébergements h2 {
     font-size: 15px;
-    font-family: 'ralewaysemibold';
+    font-weight: bold;
     margin: 0 0 0 0;
     width: 100%;
     padding: 20px 20px 10px 20px;
 }
 #hébergements h3 {
     font-size: 12px;
-    font-family: 'ralewaysemibold';
+    font-weight: bold;
     margin: 0 0 0 0;
     width: 100%;
     padding: 20px 20px 10px 20px;
@@ -527,7 +509,7 @@ main {
 }
 #activités h2 {
     font-size: 15px;
-    font-family: 'ralewaysemibold';
+    font-weight: bold;
     margin: 0 0 0 0;
     width: 100%;
     padding: 20px 20px 20px 0px;
@@ -570,7 +552,7 @@ main {
     height: 45px;
 }
 .carteact h3 {
-    font-family: 'ralewaysemibold';
+    font-weight: bold;
     padding: 5px 0 5px 18px;
     font-size: 11px;
 }
@@ -645,7 +627,7 @@ footer {
     margin: 20px;
 }
 .part h3 {
-    font-family:'ralewaysemibold';
+    font-weight: bold;
     font-size: 15px;
     margin: 10px 0 5px 0;
 }
